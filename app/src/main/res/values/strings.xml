@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TrainAware</string>
+    <string name="speed_format">Geschwindigkeit: %.1f km/h</string>
+    <string name="train_length_format">Zuglänge:\n%.0f Meter</string>
+</resources>

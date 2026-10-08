@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <!-- Eingabe-Container (wird nach Start ausgeblendet) -->
+    <LinearLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etTrainLength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Zuglänge eingeben (Meter)"
+            android:inputType="numberDecimal"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+
+        <CheckBox
+            android:id="@+id/cbDeveloperMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developer Modus"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Überwachung starten"
+            android:textSize="18sp"
+            android:layout_marginBottom="32dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="@android:color/darker_gray"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvTrainInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="64sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>
