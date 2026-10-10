@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">TrainAware</string>
     <string name="speed_format">Geschwindigkeit: %.1f km/h</string>
-    <string name="train_length_format">Zuglänge:\n%.0f Meter</string>
+    <string name="train_length_format">%.0f Meter</string>
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_label">Einstellungen</string>
+    <string name="developer_mode">Dev-Infos</string>
+    <string name="developer_mode_info">Zeigt zusätzliche Werte an. Aktuell nur Geschwindigkeit, in Zukunft den nächsten Bhf, Entfernung zum Bhf, nächster Planhalt etc.</string>
+    <string name="setting_heartbeat">Heartbeat Aktivieren (Aktivitätsanzeige)</string>
+    <string name="setting_train_number">Feld \'Zugnummer\' verwenden</string>
+    <string name="back">Zurück</string>
+    <string name="tagline">Immer am richtigen Ort</string>
+    <string name="train_number_hint">Zugnummer (Bald™)</string>
+    <string name="train_length_hint">Zuglänge</string>
+    <string name="btn_start_text">Überwachung starten</string>
+    <string name="app_version_format">App Version: %s</string>
 </resources>

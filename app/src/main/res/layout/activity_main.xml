@@ -1,64 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#373737"
     android:gravity="center"
-    android:padding="24dp"
-    android:background="@android:color/white">
+    android:orientation="vertical"
+    android:padding="24dp">
 
     <!-- Eingabe-Container (wird nach Start ausgeblendet) -->
+
     <LinearLayout
         android:id="@+id/inputContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <!-- Top Bar with Settings Icon and Title -->
+        <LinearLayout
+            android:id="@+id/TopBar"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnSettings"
+                android:layout_width="78dp"
+                android:layout_height="75dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/settings_label"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/ic_settings"
+                app:tint="#B4B4B4" />
+
+            <LinearLayout
+                android:id="@+id/TopTextBar"
+                android:layout_width="191dp"
+                android:layout_height="88dp"
+                android:layout_marginStart="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="#B4B4B4"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="@string/tagline"
+                    android:textColor="#B4B4B4"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
 
         <EditText
             android:id="@+id/etTrainLength"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Zuglänge eingeben (Meter)"
-            android:inputType="numberDecimal"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="24dp"
+            android:autofillHints="none"
+            android:backgroundTint="#920000"
+            android:hint="@string/train_length_hint"
+            android:inputType="number"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#B4B4B4"
+            android:textColorHint="#B4B4B4"
+            android:textSize="34sp"
+            android:typeface="normal"
+            app:backgroundTint="#920000" />
 
-        <CheckBox
-            android:id="@+id/cbDeveloperMode"
+        <EditText
+            android:id="@+id/etTrainNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:autofillHints="none"
+            android:backgroundTint="#920000"
+            android:enabled="false"
+            android:focusable="false"
+            android:hint="@string/train_number_hint"
+            android:inputType="number"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#B4B4B4"
+            android:textColorHint="#B4B4B4"
+            android:textSize="34sp"
+            android:typeface="normal"
+            app:backgroundTint="#920000" />
+
+        <!-- Flexible Spacer pushing the button to the bottom -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvVersion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Developer Modus"
-            android:textSize="16sp"
-            android:layout_marginBottom="24dp"/>
+            android:layout_gravity="start"
+            android:layout_marginBottom="8dp"
+            android:textColor="#B4B4B4"
+            android:textSize="14sp"
+            tools:text="App Version: 0.2" />
 
         <Button
             android:id="@+id/btnStart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Überwachung starten"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#920000"
+            android:text="@string/btn_start_text"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
             android:textSize="18sp"
-            android:layout_marginBottom="32dp"/>
+            app:backgroundTint="#920000"
+            app:cornerRadius="0dp" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvSpeed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="20sp"
-        android:textColor="@android:color/darker_gray"
-        android:visibility="gone"
-        android:layout_marginBottom="16dp"/>
-
-    <TextView
-        android:id="@+id/tvTrainInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="64sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="@android:color/white"/>
 
 </LinearLayout>
